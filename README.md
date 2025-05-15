@@ -1,1 +1,1 @@
-# coding-test-practice
+# 코딩테스트 합격자되기 자바편 연습
