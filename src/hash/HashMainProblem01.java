@@ -15,7 +15,9 @@ public class HashMainProblem01 {
             if (hashMap.containsKey(s)) {
                 hashMap.put(s, hashMap.get(s) + 1);
             }
-            hashMap.put(s, 1);
+            else {
+                hashMap.put(s, 1);
+            }
         }
 
         for (String s : completion) {
@@ -24,11 +26,9 @@ public class HashMainProblem01 {
             }
         }
 
-        for (String s : hashMap.keySet()) {
-            if (hashMap.get(s) > 0) {
+        for(String s : hashMap.keySet()){
+            if(hashMap.get(s)!=0){
                 noCompletion = s;
-                break;
-
             }
         }
         return noCompletion;
