@@ -19,6 +19,7 @@ public class HashMapBasicProblem01 {
     private static boolean solution(int[] arr, int target){
         Set<Integer> set = new HashSet<>();
 
+
         for(int i : arr){
             if(set.contains(target-i)){
                 return true;
