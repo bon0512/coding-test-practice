@@ -44,7 +44,7 @@ public class Problem_2001 {
                     int tmp = 0;
                     for(int x = 0;x<M;x++){
                         for(int y = 0; y<M; y++){
-                            tmp+=array[i+x][j+y];
+                            tmp+=practice.array[i+x][j+y];
                         }
                     }
                     max = Math.max(max,tmp);
