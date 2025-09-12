@@ -25,8 +25,11 @@ public class BaekJoon_16637 {
             }
         }
 
+
         dfs(0, nums.get(0));
         System.out.println(max);
+
+
     }
 
     // index: 연산자 인덱스, current: 현재 계산된 값
@@ -56,4 +59,6 @@ public class BaekJoon_16637 {
             default: throw new IllegalArgumentException("Invalid op: " + op);
         }
     }
+
+
 }
