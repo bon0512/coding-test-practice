@@ -51,13 +51,16 @@ public class BaekJoon_15663 {
         }
 
         int prev = -1;
+
         for (int i = 0; i < arr.length; i++) {
             if (!visited[i] && prev !=arr[i]) {
+
                 visited[i] = true;
                 temp[depth] = arr[i];
                 per(depth + 1, temp);
                 visited[i] = false;
                 prev = arr[i];
+
             }
 
         }
