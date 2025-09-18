@@ -43,19 +43,19 @@ public class BeakJoon_14503 {
 
             // 2. 주변에 청소할 칸이 있는지 확인
             if (check(x, y)) {
-                for (int i = 0; i < 4; i++) {
-                    d = (d + 3) % 4;
-                    int ny = y + dy[d];
-                    int nx = x + dx[d];
 
-                    if (nx >= 0 && nx < M && ny >= 0 && ny < N) {
-                        if (grid[ny][nx] == 0 && !cleaned[ny][nx]) {
-                            x = nx;
-                            y = ny;
-                            break;
-                        }
+                d = (d + 3) % 4;
+                int ny = y + dy[d];
+                int nx = x + dx[d];
+
+                if (nx >= 0 && nx < M && ny >= 0 && ny < N) {
+                    if (grid[ny][nx] == 0 && !cleaned[ny][nx]) {
+                        x = nx;
+                        y = ny;
+
                     }
                 }
+
             } else {
 
                 int backDir = (d + 2) % 4;
