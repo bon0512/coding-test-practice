@@ -2,6 +2,14 @@ package baekjoon.bruteforce;
 
 import java.util.Scanner;
 
+/**
+ * 이전순열
+ * 1. 끝에서 내려오면서 내림차순을 깨는 인덱스를 찾는다 i-1>i;
+ * 2. 그후 피봇 보다 작으면서 가장 큰수를 찾고 피봇이랑 스왑한다.
+ * 3. 그후 내림차순으로만드는데 사실 이미 내림차순 상태라 단순히 reverse만 해주면 된다.
+ *
+ */
+
 public class BaekJoon_10973 {
 
 
