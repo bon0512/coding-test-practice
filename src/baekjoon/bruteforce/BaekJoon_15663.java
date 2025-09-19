@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * N과 M 9
- *
+ * 다시 복습 2025.9.19
  */
 
 public class BaekJoon_15663 {
@@ -14,6 +14,7 @@ public class BaekJoon_15663 {
     static int N, M;
     static int[] arr;
     static boolean[] visited;
+    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) {
 
@@ -29,41 +30,37 @@ public class BaekJoon_15663 {
         }
         Arrays.sort(arr);
 
-
-
-        per(0, new int[M]);
+        dfs(0,new int[M]);
+        System.out.print(sb);
 
 
     }
 
-    private static void per(int depth, int[] temp) {
+    private static void dfs(int depth, int[] temp) {
 
-        if (depth == M) {
-
-            for (int j : temp) {
-                System.out.print(j + " ");
+        if(depth==M){
+            for(int i : temp){
+                sb.append(i).append(" ");
             }
-            System.out.println();
-
-            return;
-
-
+            sb.append("\n");
+            return ;
         }
+
+
 
         int prev = -1;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (!visited[i] && prev !=arr[i]) {
-
-                visited[i] = true;
+        for (int i = 0; i < N; i++) {
+            if(!visited[i] && prev!=arr[i]){
+                visited[i] =true;
                 temp[depth] = arr[i];
-                per(depth + 1, temp);
-                visited[i] = false;
                 prev = arr[i];
-
+                dfs(depth+1,temp);
+                visited[i] = false;
             }
-
         }
 
     }
+
+
 }
