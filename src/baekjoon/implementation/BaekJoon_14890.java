@@ -36,14 +36,11 @@ public class BaekJoon_14890 {
             }
         }
 
-<<<<<<< HEAD
         System.out.println("==세로===g");
-=======
         /**
          * 세로 방향 확인
          */
         // System.out.println("==세로===");
->>>>>>> 68daf18201dd42364fdb6d0a95ab2d3915b3b501
         for (int i = 0; i < N; i++) {
             int[] temp = new int[N];
             for (int j = 0; j < N; j++) {
