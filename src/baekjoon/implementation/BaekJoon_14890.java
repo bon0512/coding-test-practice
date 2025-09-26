@@ -33,7 +33,7 @@ public class BaekJoon_14890 {
             }
         }
 
-        System.out.println("==세로===");
+        System.out.println("==세로===g");
         for (int i = 0; i < N; i++) {
             int[] temp = new int[N];
             for (int j = 0; j < N; j++) {
