@@ -52,6 +52,7 @@ public class BaekJoon_11725 {
         while (!queue.isEmpty()) {
             Integer start = queue.poll();
 
+            //자식 인덱스에 부모 저장
             for (Integer next : graph[start]) {
                 if (!visited[next]) {
                     list[next] = start;
