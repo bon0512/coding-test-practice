@@ -16,7 +16,7 @@ public class BaekJoon_14226 {
         Scanner sc = new Scanner(System.in);
         S = sc.nextInt();
 
-        mem = new boolean[10000][10000];
+        mem = new boolean[2000][2000];
 
         int answer = bfs();
         System.out.println(answer);
@@ -36,19 +36,16 @@ public class BaekJoon_14226 {
             if (screen == S) {
                 return curTime;
             }
-
+            //전 단계에서 방문하엿으면 건너뛴다.
 
             if (mem[screen][clip]) continue;
             mem[screen][clip] =true;
 
             // 1. 화면에 있는 이모티콘을 모두 복사해서 클립보드를 저장한다.
-
-
             queue.add(new int[]{screen, screen, curTime + 1});
 
 
             //2. 클립보드에 있는 모든 이모티콘을 화면에 붙여넣기 한다.
-
             queue.add(new int[]{screen + clip, clip, curTime + 1});
 
 
