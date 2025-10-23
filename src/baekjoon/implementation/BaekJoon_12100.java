@@ -3,7 +3,7 @@ package baekjoon.implementation;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BaekJoon_2048 {
+public class BaekJoon_12100 {
 
     static int N;
     static int[][] grid;
