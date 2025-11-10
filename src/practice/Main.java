@@ -1,28 +1,24 @@
 package practice;
 
-interface F{
-    int app(int n) throws Exception;
-}
-public class Main {
-    public static  int run(F f){
-        try{
-            return f.app(3);
-        } catch (Exception e){
-            return 7;
+import java.util.Arrays;
+
+public class Main{
+    public static class BO {
+        public int v;
+        public BO(int v) {
+            this.v = v;
         }
     }
-
-
     public static void main(String[] args) {
-        F f = (x)->{
-            if(x>2){
-                throw new Exception();
-            }else{
-                return x*2;
-            }
-        };
-
-        System.out.println(run(f) + run(n->n+9));
-        
+        BO a = new BO(1);
+        BO b = new BO(2);
+        BO c = new BO(3);
+        BO[] arr = {a, b, c};
+        System.out.println(Arrays.toString(arr));
+        BO t = arr[0];
+        arr[0] = arr[2];
+        arr[2] = t;
+        arr[1].v = arr[0].v;
+        System.out.println(a.v + "a" + b.v + "b" + c.v);
     }
 }
