@@ -26,9 +26,9 @@ public class BaekJoon_2502 {
                 y = x + y;
                 x = temp;
             }
-            System.out.println("x : "+x);
-            System.out.println("y : "+y);
-            System.out.println("최대 사이즈 : "+K/y);
+            //System.out.println("x : "+x);
+            //System.out.println("y : "+y);
+            //System.out.println("최대 사이즈 : "+K/y);
             for (int i = (K / y) -1; i >= 0; i--) {
 
                if((K - (i * y)) % x == 0) {
