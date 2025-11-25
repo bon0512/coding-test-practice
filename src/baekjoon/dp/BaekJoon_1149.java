@@ -13,16 +13,12 @@ public class BaekJoon_1149 {
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
         houseColor = new int[N + 1][3];
-        mem = new int[N+1][3];
         for (int i = 1; i <= N; i++) {
             houseColor[i][0] = sc.nextInt();
             houseColor[i][1] = sc.nextInt();
             houseColor[i][2] = sc.nextInt();
         }
 
-        mem[1][0] = houseColor[1][0];
-        mem[1][1] = houseColor[1][1];
-        mem[1][2] = houseColor[1][2];
 
         for (int i = 2; i <=N ; i++) {
             mem[i][0] = Math.min(mem[i-1][1],mem[i-1][2])+houseColor[i][0];
