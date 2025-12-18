@@ -42,5 +42,9 @@ public class Main{
         System.out.println("substring1 = " + substring1);
         System.out.println("substring = " + substring);
         System.out.println(Arrays.toString(exist));
+
+        String temp = "012";
+        int i = Integer.parseInt(temp);
+        System.out.println(i);
     }
 }

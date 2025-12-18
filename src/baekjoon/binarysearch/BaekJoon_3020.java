@@ -3,6 +3,13 @@ package baekjoon.binarysearch;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
+/**
+ * 각 높이의 누적합 배열을 써서 벌레가 나는 높이에 따라 최소값을 구한다.
+ * 위 종유석을 구할때는 H-i+1  +1을 꼭해줘야한다.
+ */
+
+
 public class BaekJoon_3020 {
 
     static int N,H;

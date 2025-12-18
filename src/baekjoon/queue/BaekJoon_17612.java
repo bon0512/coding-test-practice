@@ -6,6 +6,11 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 
+/**
+ * 계산대, 남은 계산대는 우선순위 큐로 설정하고
+ * 동시에 끝나는 사람들을 잘 처리해줘야한다.
+ */
+
 class BaekJoon_17612{
 
     static int N,K;

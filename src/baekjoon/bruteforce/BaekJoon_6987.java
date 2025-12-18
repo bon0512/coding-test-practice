@@ -2,6 +2,12 @@ package baekjoon.bruteforce;
 
 import java.util.Scanner;
 
+/**
+ * 처음 승 패 숫자가 같아야하고 비긴 나라가 1개면 안되고 이런 조건식으로만 해결할 수 있을줄 알았는데.
+ * 하나하나 다 경기를 확인해봐야한다.
+ * 어차피 6개국의 승무패 이니 3^6 이니 백트래킹으로 전부 살펴보면된다.
+ */
+
 public class BaekJoon_6987 {
 
     static int[][] score;
