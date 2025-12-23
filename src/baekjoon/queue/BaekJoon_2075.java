@@ -1,4 +1,4 @@
-package baekjoon.implementation;
+package baekjoon.queue;
 
 import java.util.*;
 
