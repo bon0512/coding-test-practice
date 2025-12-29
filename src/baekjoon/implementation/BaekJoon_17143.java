@@ -133,39 +133,32 @@ public class BaekJoon_17143 {
                 sharkInformation[i][3] = dir;
             }
 
+            grid = new int[R + 1][C + 1];
+
             //4. 상어 겹쳤을때 중복 제거
             for (int i = 1; i <= M; i++) {
                 if (sharkInformation[i][5] == 0) continue;
 
-                int sharkY = sharkInformation[i][0];
-                int sharkX = sharkInformation[i][1];
+                int y = sharkInformation[i][0];
+                int x = sharkInformation[i][1];
                 int size = sharkInformation[i][4];
 
-                for (int j = 1; j <= M; j++) {
-                    if (sharkInformation[j][5] == 0) continue;
-                    int tempY = sharkInformation[j][0];
-                    int tempX = sharkInformation[j][1];
-                    int tempSize = sharkInformation[j][4];
-
-                    if(sharkY == tempY && sharkX == tempX){
-                        if(size>tempSize){
-                            sharkInformation[j][5] = 0;
-
-                        }else if(size<tempSize){
-                            sharkInformation[i][5] = 0;
-                        }
+                // 해당 칸에 상어가 없다면
+                if (grid[y][x] == 0) {
+                    grid[y][x] = i;
+                }
+                // 이미 상어가 있다면
+                else {
+                    int other = grid[y][x];
+                    if (sharkInformation[other][4] < size) {
+                        sharkInformation[other][5] = 0; // 기존 상어 죽음
+                        grid[y][x] = i;
+                    } else {
+                        sharkInformation[i][5] = 0; // 현재 상어 죽음
                     }
                 }
             }
 
-            grid = new int[R+1][C+1];
-            //상어를 새 배열에 배치한다.
-            for (int i = 1; i <=M ; i++) {
-                if (sharkInformation[i][5] == 0) continue;
-                int sharkY = sharkInformation[i][0];
-                int sharkX = sharkInformation[i][1];
-                grid[sharkY][sharkX] = i;
-            }
 
 
         }
