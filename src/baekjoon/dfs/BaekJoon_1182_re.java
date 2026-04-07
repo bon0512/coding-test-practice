@@ -2,6 +2,12 @@ package baekjoon.dfs;
 
 import java.util.Scanner;
 
+/**
+ ==========================
+ * 링크 : https://www.acmicpc.net/problem/1182
+ * 이름 : 부분수열의 합
+ * 난이도 : S2
+ * ========================== */
 public class BaekJoon_1182_re {
 
     static int N,S,count;
